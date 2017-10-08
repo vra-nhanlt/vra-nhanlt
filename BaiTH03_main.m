@@ -21,6 +21,10 @@ allTestingLabels = loadMNISTLabels('./t10k-labels.idx1-ubyte');
 % result = recognize(allTrainingImages, allTrainingLabels, allTestingImages, 500)
 % result = recognize(allTrainingImages, allTrainingLabels, allTestingImages, 900)
 
-check_recognize_result(allTrainingImages, allTrainingLabels, allTestingImages, allTestingLabels, 5);
-check_recognize_result(allTrainingImages, allTrainingLabels, allTestingImages, allTestingLabels, 500);
-check_recognize_result(allTrainingImages, allTrainingLabels, allTestingImages, allTestingLabels, 900);
+% check_recognize_result(allTrainingImages, allTrainingLabels, allTestingImages, allTestingLabels, 5);
+% check_recognize_result(allTrainingImages, allTrainingLabels, allTestingImages, allTestingLabels, 500);
+% check_recognize_result(allTrainingImages, allTrainingLabels, allTestingImages, allTestingLabels, 900);
+
+%wrong_recognition_count(allTrainingImages, allTrainingLabels, allTestingImages, allTestingLabels, 0)
+%confusion_matrix(allTrainingImages, allTrainingLabels, allTestingImages, allTestingLabels)
+evaluate(allTrainingImages, allTrainingLabels, allTestingImages, allTestingLabels, 'cosine', 3)
