@@ -22,32 +22,48 @@ labelsTestingFileName = './t10k-labels.idx1-ubyte';
 % featuresTrainingData = extractLocalFeaturesLBP(imgsTrainingData, 2, 2);
 % featuresTestingData = extractLocalFeaturesLBP(imgsTestingData, 2, 2);
 % 
+
+% LBP
+% featuresTrainingData = extractFeaturesHoG(imgsTrainingData);
+% featuresTestingData = extractFeaturesHoG(imgsTestingData);
+% 
+% model = fitcknn(featuresTrainingData',labelsTrainingData, 'NumNeighbors', 3);
+% results = predict(model,featuresTestingData');
+%  
+% correctResults = (results == labelsTestingData);
+% fprintf("correct recognition results count (using Features HoG): ");
+% correctResultsCount = sum(correctResults)
+
+% 'Cellsize', [7 7]
+% subplot(2, 5, 1);
+% imgShow
+% hist
+
+% -------------------------
+% Local Features LBP 2x2, k =1
+% featuresTrainingData = extractLocalFeaturesLBP(imgsTrainingData, 2, 2);
+% featuresTestingData = extractLocalFeaturesLBP(imgsTestingData, 2, 2);
+% 
 % model = fitcknn(featuresTrainingData',labelsTrainingData, 'NumNeighbors', 1);
 % results = predict(model,featuresTestingData');
 % 
 % correctResults = (results == labelsTestingData);
-% fprintf("Local Features LBP 2x2, k = 1");
+% fprintf("\nLocal Features LBP 2x2, k = 1: ");
 % correctResultsCount = sum(correctResults)
-
-% -------------------------
-% Local Features LBP 2x2, k =1
-featuresTrainingData = extractLocalFeaturesLBP(imgsTrainingData, 2, 2);
-featuresTestingData = extractLocalFeaturesLBP(imgsTestingData, 2, 2);
-
-model = fitcknn(featuresTrainingData',labelsTrainingData, 'NumNeighbors', 1);
-results = predict(model,featuresTestingData');
-
-correctResults = (results == labelsTestingData);
-fprintf("\nLocal Features LBP 2x2, k = 1: ");
-correctResultsCount = sum(correctResults)
 
 % ----------------------------------
 % Local Features LBP 2x2, k =3
-model = fitcknn(featuresTrainingData',labelsTrainingData, 'NumNeighbors', 3);
-results = predict(model,featuresTestingData');
+% model = fitcknn(featuresTrainingData',labelsTrainingData, 'NumNeighbors', 3);
+% results = predict(model,featuresTestingData');
+% 
+% correctResults = (results == labelsTestingData);
+% fprintf("\nLocal Features LBP 2x2, k = 3: ");
+% correctResultsCount = sum(correctResults)
 
-correctResults = (results == labelsTestingData);
-fprintf("\nLocal Features LBP 2x2, k = 3: ");
-correctResultsCount = sum(correctResults)
+testCustomHoG(imgsTrainingData, 1993, [7 7], 0);
+testCustomHoG(imgsTrainingData, 1994, [7 7], 1);
+testCustomHoG(imgsTrainingData, 1995, [7 7], 2);
+testCustomHoG(imgsTrainingData, 1996, [7 7], 3);
+
 
 
