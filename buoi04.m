@@ -23,7 +23,7 @@ labelsTestingFileName = './t10k-labels.idx1-ubyte';
 % featuresTestingData = extractLocalFeaturesLBP(imgsTestingData, 2, 2);
 % 
 
-% LBP
+% HoG
 % featuresTrainingData = extractFeaturesHoG(imgsTrainingData);
 % featuresTestingData = extractFeaturesHoG(imgsTestingData);
 % 
