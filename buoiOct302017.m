@@ -22,7 +22,7 @@ showAFeaturesVector(newImgTrainingDataStore, myBagOfFeatures, 1);
 
 % Build a classifier model
 % categoryClassifier = trainImageCategoryClassifier(ewImgTrainingDataStore, myBagOfFeatures);
-% For saving time, just load it from file. Thanks Mr Nguyen!
+% For saving time, just load it from file thanks to Mr Nguyen!
 load('BagofFeature/categoryClassifier.mat');
 
 % Load data test
