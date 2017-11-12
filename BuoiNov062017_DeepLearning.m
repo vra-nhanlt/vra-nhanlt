@@ -33,7 +33,7 @@ classifier = fitcecoc(featuresTrainingData, lblTrainingData, 'Learners', 'Linear
 % classifier = fitcdiscr(featuresTrainingData', lblTrainingData);
 
 % Test recognition and show result
-result = predict(classifier, featuresTestingData);
+result = predict(classifier, featuresTestingData');
 checkedResult = (result == lblTestingData);
 fprintf('\nRight recogition result count: %d\n', sum(checkedResult));
 
